@@ -24,6 +24,11 @@ namespace L20230724
             y += addY; 
         }
 
+        public override void Update()
+        {
+            Console.WriteLine("Transform Update()");
+        }
+
         public int x;
         public int y;
     }

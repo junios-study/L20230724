@@ -12,6 +12,7 @@ namespace L20230724
         {
             components = new List<Component>();
             AddComponent(new Transform());
+            name = String.Empty;
         }
 
         ~GameObject() 
@@ -23,6 +24,7 @@ namespace L20230724
 
         public void AddComponent(Component newComponent)
         {
+            newComponent.gameObject = this;
             components.Add(newComponent);
         }
 
@@ -30,6 +32,8 @@ namespace L20230724
         {
             components.Remove(removeComponent);
         }
+
+        public string name;
 
     }
 }

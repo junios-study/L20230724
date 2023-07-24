@@ -10,5 +10,20 @@ namespace L20230724
     {
         public Renderer() { }
         ~Renderer() { }
+
+        public override void Start()
+        {
+            Console.WriteLine("Renderer Start()");
+        }
+
+        public override void Update()
+        {
+            Console.WriteLine("Renderer Update()");
+        }
+
+        public void Render()
+        {
+            Console.WriteLine("Renderer Render()");
+        }
     }
 }

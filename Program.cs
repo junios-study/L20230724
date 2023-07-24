@@ -14,6 +14,13 @@ namespace L20230724
 
             myEngine.Instantiate(new GameObject());
 
+           
+            GameObject wall = new GameObject();
+            wall.name = "Wall";
+            wall.AddComponent(new Renderer());
+
+            myEngine.Instantiate(wall);
+
             myEngine.Run();
         }
     }
