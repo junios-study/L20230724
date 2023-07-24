@@ -60,9 +60,11 @@ namespace L20230724
                     GameObject currentGameObject = gameObjects[i];
                     for (int j = 0; j < currentGameObject.components.Count; j++)
                     {
-                        if (currentGameObject.components[j] is Renderer)
+                        bool result = currentGameObject.components[j] is Renderer;
+                        if (result)
                         {
-                            (currentGameObject.components[j] as Renderer).Render();
+                            Renderer temp = (currentGameObject.components[j] as Renderer);
+                            temp.Render();
                         }
                     }
                 }
